@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thought in elementrix</title>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <header>
+            <h4 class="logo">Blog of Elementrix</h4>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="{% url 'main' %}">Posts</a></li>  
+                    <li><a href="{% url 'fake' %}">fake</a></li>  
+                </ul>
+            </nav>
+            <a class="btn_new_post" href="{% url 'new' %}"><button>New Post</button></a>
+        </header>
+
+        
+        {% block content %}
+        {% endblock %}
+        
+    </body>
+</html>
